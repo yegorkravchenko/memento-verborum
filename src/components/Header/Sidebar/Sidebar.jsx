@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { IoCloseSharp } from 'react-icons/io5';
-import { navData } from './navData';
+import { navData } from '../navData';
 import styles from './Sidebar.module.scss';
 
 function Sidebar({ isOpen, toggleSidebar }) {

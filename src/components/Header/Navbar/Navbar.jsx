@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.scss';
-import logo from '../../img/logo.svg';
-import { navData } from './navData';
+import logo from '../../../img/logo.svg';
+import { navData } from '../navData';
 import { FaBars } from 'react-icons/fa';
 
 function Navbar({ toggleSidebar }) {
