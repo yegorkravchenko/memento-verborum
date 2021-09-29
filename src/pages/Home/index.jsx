@@ -1,9 +1,13 @@
 import React from 'react';
+import Header from '../../components/Header';
+import styles from './Home.module.scss';
 
 function Home() {
   return (
     <>
-      <h1>Home Page</h1>
+      <div className={styles.coloredBackground}>
+        <Header />
+      </div>
     </>
   );
 }

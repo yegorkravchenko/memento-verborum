@@ -1,0 +1,55 @@
+@use '../../../styles/variables';
+
+.sidebarWrapper {
+  display: none;
+  position: fixed;
+  background-color: rgba($color: #000000, $alpha: 0.45);
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebarWrapper.active {
+  display: block;
+}
+
+.sidebar {
+  position: absolute;
+  right: 0;
+  max-width: 320px;
+  width: 80%;
+  height: 100vh;
+
+  background-color: variables.$main-color;
+  padding: 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin-top: 20px;
+  text-align: right;
+
+  &:first-child {
+    margin: 0 0 40px 0;
+  }
+}
+
+.link {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover,
+.selectedLink {
+  font-size: 1.8rem;
+}
+
+.closeIcon {
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}

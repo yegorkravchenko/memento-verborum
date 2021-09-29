@@ -1,0 +1,58 @@
+.header {
+  padding: 40px 0;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-left: 70px;
+
+  &:first-child {
+    margin: 0;
+  }
+}
+
+.link {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: font-size 300ms;
+}
+
+.link:hover,
+.selectedLink {
+  font-size: 1.8rem;
+}
+
+.menuIcon {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: font-size 300ms;
+
+  &:hover {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+}
