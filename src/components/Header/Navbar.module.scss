@@ -33,3 +33,26 @@
 .selectedLink {
   font-size: 1.8rem;
 }
+
+.menuIcon {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: font-size 300ms;
+
+  &:hover {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .nav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+}

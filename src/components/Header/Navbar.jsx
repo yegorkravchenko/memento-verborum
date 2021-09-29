@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 import logo from '../../img/logo.svg';
 import { navData } from './navData';
+import { FaBars } from 'react-icons/fa';
 
-function Navbar() {
+function Navbar({ toggleSidebar }) {
   return (
     <header className={styles.header}>
       <div className={['wrapper', styles.headerWrapper].join(' ')}>
@@ -25,6 +26,7 @@ function Navbar() {
             ))}
           </ul>
         </nav>
+        <FaBars className={styles.menuIcon} onClick={toggleSidebar} />
       </div>
     </header>
   );
