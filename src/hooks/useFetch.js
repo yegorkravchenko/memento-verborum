@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export const useFetch = (callback) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
 
   const fetching = async () => {
@@ -12,9 +12,7 @@ export const useFetch = (callback) => {
       setError(e.message);
       console.log(e.message);
     } finally {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 3500);
+      setIsLoading(false);
     }
   };
 
