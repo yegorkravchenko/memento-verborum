@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import Quote from '../../components/Quote';
 import styles from './Home.module.scss';
 import QuoteService from '../../api/QuoteService';
+import Footer from '../../components/Footer';
 
 function Home() {
   const [quoteData, setQuoteData] = useState({});
@@ -23,7 +24,7 @@ function Home() {
         <main>
           <Quote isLoading={quoteIsLoading} data={quoteData} />
         </main>
-        <footer></footer>
+        <Footer />
       </div>
     </>
   );
