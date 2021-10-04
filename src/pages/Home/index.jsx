@@ -21,7 +21,7 @@ function Home() {
       <div className={styles.coloredBackground}>
         <Header />
         <main>
-          <Quote data={quoteData} />
+          <Quote isLoading={quoteIsLoading} data={quoteData} />
         </main>
         <footer></footer>
       </div>
