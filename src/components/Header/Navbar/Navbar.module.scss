@@ -1,11 +1,24 @@
+@use '../../../styles/breakpoints';
+
 .header {
   padding: 40px 0;
+  animation: fadeIn 500ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  @include breakpoints.md {
+    padding: 20px 0;
+  }
 }
 
 .headerWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav {
+  @include breakpoints.lg {
+    display: none;
+  }
 }
 
 .nav ul {
@@ -45,14 +58,19 @@
   &:hover {
     font-size: 2.4rem;
   }
+
+  @include breakpoints.lg {
+    display: block;
+  }
 }
 
-@media only screen and (max-width: 850px) {
-  .nav {
-    display: none;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
   }
-
-  .menuIcon {
-    display: block;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

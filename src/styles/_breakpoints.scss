@@ -1,0 +1,27 @@
+$screen-sm-max: 480px;
+$screen-md-max: 660px;
+$screen-lg-max: 1080px;
+
+@mixin sm {
+  @media only screen and (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media only screen and (max-width: $screen+'px') {
+    @content;
+  }
+}
