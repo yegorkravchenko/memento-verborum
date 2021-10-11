@@ -1,5 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
+import { FiCopy, FiImage } from 'react-icons/fi';
 import Loader from '../UI/Loader';
 import styles from './Quote.module.scss';
 
@@ -15,7 +16,13 @@ function Quote({ isLoading, data }) {
               <blockquote className={styles.quoteContent}>
                 {data.content}
               </blockquote>
-              <p className={styles.author}>~ {data.author}</p>
+              <div className={styles.quoteFooter}>
+                <div className={styles.btnsContainer}>
+                  <FiImage className={styles.icon} />
+                  <FiCopy className={styles.icon} />
+                </div>
+                <p className={styles.author}>~ {data.author}</p>
+              </div>
             </>
           )}
         </div>
